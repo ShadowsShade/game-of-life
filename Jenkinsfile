@@ -9,6 +9,10 @@ pipeline {
         stage('Build'){
             steps {
                 sh 'mvn package' 
+		   'mvn clean package'
+		    'mvn test'
+		    'mvn compile'
+		    'mvn package'
             }
         }
         stage('Postbuild'){
